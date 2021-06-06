@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Mailchimp-Tolunay_Kutlu_IT_BUSINESS</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+   
+    <main>
+        <h1>Mailchimp IT-Business</h1>
+        <div class="portfolioRading">
+            <div class="portfolioRading__text">
+                <h2>Wat van de website vind je het mooist ?</h2>
+                <p>Op deze vraag kregen we verschillende antwoorden. We zijn heel blij met het resultaten. We hopen dat we in het toekomst veel meer tijd kunnen spenderen voor betere vragenstelling. Jullie kunnen mij altijd contacteren via het onderstaande adress die is meegedeeld in footer gedeelte</p>
+            </div>
+        <div class="easyUse">
+            <div class="container__pie">
+                <canvas id="pieChart"></canvas>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="easyUse__text">
+        <div class="text">
+            <h2>Beoordeel de design van de website ?</h2>
+            <p>Ik ben blij dat er niemand heeft gekozen voor, ik vindt er niets moois aan de weebsite. maar de andere 2 waren redelijk dicht bij elkaar. Wij zullen ervoor zorgen dat we goeie impact hebben voor de komende projecten.</p>
+        </div>
+        <div class="container">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    <div class="questions">
+        <h3>Wie heeft de mail geopend en wie niet?</h3>
+            <img src="img/Schermafbeelding1.png" alt="">
+            <img src="img/Schermafbeelding2.png" alt="">
+            <img src="img/Schermafbeelding3.png" alt="">
+            <img src="img/Schermafbeelding4.png" alt="">
+            <img src="img/Schermafbeelding5.png" alt="">
+            <img src="img/Schermafbeelding6.png" alt="">    
+        </div>
+        <div class="most-views">
+            <h3>Waar is het meest op geklikt</h3>
+            <img src="img/Schermafbeelding7.png" alt="">
+        </div>
+    </main>
+
+
+    <footer>
+        <h5 class=footer__title>Tolunay Kutlu - PGM Arteveldehogeschool</h5>
+        <p>This website was created for IT Business. Report the results of a mailchimp.</p>
+    </footer>
+
+    <script>
+        let myChart = document.getElementById('myChart').getContext('2d');
+        let pieChart = document.getElementById('pieChart').getContext('2d');
+        
+        //globale options
+        // Chart.defaults.global.defaultFontSize = 18;
+
+
+        let massPopChart = new Chart(pieChart, {
+            type:'pie', // bar, horizontalBar, pie, line, radar
+            data:{
+                labels:['ik vind dat de kleuren goeie combinatie hebben', 'ik vind dat de design goed gemaakt is', 'ik vind er niets mooi aan de website'],
+                datasets:[{
+                    label:'aantal stemmen',
+                    data:[5,4,0],
+                    backgroundColor:['rgba(207, 0, 15, 1)', 'rgb(255,255,0)', 'rgb(128,0,128)'],
+                    borderWidth: 1,
+                    borderColor: '#777',
+                    hoverBorderWidth:3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            Options:{
+                title:{
+                    display:true,
+                    text:'Wat van de website vind je het mooist ?'
+                },
+            }
+        })
+        
+        let portfolioRating = new Chart(myChart, {
+            type: 'bar',
+            data: {
+                labels:['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+                datasets:[{
+                label:'aantal stemmen',
+                data:[0, 0, 0, 1, 0, 1, 3, 0 , 4, 2],
+                backgroundColor: 'rgba(83, 51, 237, 1)',
+                borderWidth: 1,
+                borderColor: '#777',
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#000'
+                }]
+            },
+            Options:{
+                title:{
+                    display:true,
+                    text:'Wat van de website vind je het mooist ?'
+                },
+            }
+        })
+    </script>
+</body>
+</html>

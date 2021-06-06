@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+main {
+  padding: 1rem;
+  width: 80%;
+  margin: auto;
+}
+
+.portfolioRading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+h1:hover {
+  text-decoration: underline;
+}
+
+.portfolioRading__text {
+  width: 40%;
+}
+
+.portfolioRading__text h2 {
+  font-size: 2rem;
+}
+
+.portfolioRading__text p {
+  font-size: 1rem;
+  padding-top: 1rem;
+}
+
+.easyUse {
+  width: 45%;
+}
+
+.easyUse__text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  width: 40%;
+  padding-bottom: 1rem;
+}
+
+.container {
+  width: 45%;
+  margin-left: 15rem;
+}
+
+footer {
+  text-align: center;
+  border: 1px solid black;
+  background-color: black;
+}
+
+.footer__title {
+  padding-top: 1rem;
+  color: white;
+}
+
+footer p {
+  color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  font-size: 2rem;
+}
+
+h3:hover {
+  text-decoration: underline;
+}
+
+.questions img {
+  max-width: 100%;
+}
+
+.most-views h3 {
+  font-size: 2rem;
+}
+
+.most-views h3:hover {
+  text-decoration: underline;
+}
+
+.most-views img {
+  max-width: 100%;
+}
